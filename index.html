@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/3b1a5a6b2d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap' ; />
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <main>
+    <div class="searchBar">
+      <input type='text'>
+      <i class="fas fa-search"></i>
+      <button id='searchBtn' onclick="showContent()">Search</button>
+    </div>
+    <container class='cont'>
+      <div class='containerForAvatar'><img src="data:," class='avatar'></div>
+      <div class='informations'>
+        <div class='userInformations'>
+          <div class='userNameAndDateOfRegistration'>
+            <p id='userName'></p>
+            <p id='dateOfRegistration'></p>
+          </div>
+          <p id='bio'></p>
+        </div>
+        <div class='stats'>
+          <div class='repos'></div>
+          <div class='followers'></div>
+          <div class='following'></div>
+        </div>
+        <div class='socialMedia'>
+          <div class='localisationAndTwitter'>
+
+
+            <div class='localisationDivAndIcone'>
+              <i class=" fas fa-map-marker-alt"></i>
+              <div class='localisation'></div>
+            </div>
+            <div class='twitterDivAndIcone'>
+              <i class="fab fa-twitter"></i>
+              <div class='twitter'></div>
+            </div>
+          </div>
+          <div class='blogAndEmail'>
+            <div class='blogDivAndIcone'>
+              <i class="fas fa-link"></i>
+              <div class='blog'></div>
+            </div>
+            <div class='emailDivAndIcone'>
+              <i class="fas fa-building"></i>
+              <div class='email'></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </container>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
