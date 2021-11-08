@@ -25,7 +25,31 @@
 
       const promise = fetch(`https://api.github.com/users/${searchNickname}`)
 
-        .then((response) => response.json())
+        .then((response) => {
+
+
+          console.log(response);
+
+          if (response.status === 404) {
+
+            console.log('Nie znaleziono użytkownika o podanym loginie')
+            let newItem = document.createElement("span");
+            let textnode = document.createTextNode("User not found");
+            newItem.appendChild(textnode);
+            newItem.classList.add('userNotFound')
+
+            var searchBar = document.querySelector(".searchBar");
+            searchBar.insertBefore(newItem, searchBar.childNodes[2]);
+
+
+
+            throw new Error('User Not found');
+
+          }
+
+          return response.json()
+
+        })
         .then((data) => {
           console.log(data)
 
@@ -120,17 +144,20 @@
           } else {
             email.innerHTML = emailAddress;
           }
-
+          document.querySelector('.cont').style.display = "flex";
 
         })
+        .catch(function (error) {
+          console.log(error);
+        });
 
 
     };
 
 
-    function showContent() {
+    /*function showContent() {
       document.querySelector('.cont').style.display = "flex";
-    };
+    };*/
 
 
     searchBtn.addEventListener('click', searchUser);
