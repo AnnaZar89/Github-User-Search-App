@@ -83,7 +83,8 @@
       transform: translateX(2px);
     }
 
-    .userNotFound {
+    .errorElement {
+
       color: red;
       font-size: 12px;
     }
