@@ -4,9 +4,9 @@
  const userName = document.querySelector('#userName');
  const dateOfRegistration = document.querySelector('#dateOfRegistration');
  const bio = document.querySelector('#bio');
- const repos = document.querySelector('.repos');
- const followers = document.querySelector('.followers');
- const following = document.querySelector('.following');
+ const repos = document.querySelector('.repos .number');
+ const followers = document.querySelector('.followers .number');
+ const following = document.querySelector('.following .number');
 
 
  const localisation = document.querySelector('.localisation');
@@ -30,30 +30,13 @@
 
        console.log(response);
 
-       /* if (response.status === 404) {
 
-         console.log('Nie znaleziono użytkownika o podanym loginie')
-         let newItem = document.createElement("span");
-         let textnode = document.createTextNode("User not found");
-         newItem.appendChild(textnode);
-         newItem.classList.add('userNotFound')
-
-         var searchBar = document.querySelector(".searchBar");
-         searchBar.insertBefore(newItem, searchBar.childNodes[2]);
-
-
-
-         throw new Error('User Not found');
-
-       }*/
 
        if (response.status === 404) {
 
 
 
 
-         //         document.querySelector('.cont').style.display = "none";
-         //         errorElement.style.display = 'block';
          throw new Error('User Not found');
 
        }
@@ -62,7 +45,7 @@
 
      })
      .then((data) => {
-       errorElement.remove()
+       errorElement.style.display = 'none'
        console.log(data)
 
 
@@ -71,7 +54,6 @@
        const img = document.querySelector('.avatar');
 
        img.src = imgSrc;
-       //          picture.append(img)
        img.innerHTML = img.src;
 
 
@@ -109,15 +91,15 @@
 
 
        let repository = data.public_repos;
-       repos.innerHTML = 'Repos: ' + repository;
+       repos.innerHTML = repository;
 
 
        let howManyFollowers = data.followers;
-       followers.innerHTML = 'Followers: ' + howManyFollowers;
+       followers.innerHTML = howManyFollowers;
 
 
        let howManyFollowing = data.following;
-       following.innerHTML = 'Following: ' + howManyFollowing;
+       following.innerHTML = howManyFollowing;
 
        let city = data.location;
        if (city == null) {
@@ -161,13 +143,11 @@
      })
      .catch(function (error) {
        console.log(error);
-       //       errorElement.style.display = 'block';
 
        document.querySelector('.cont').style.display = "none";
        errorElement.innerHTML = error;
 
-       //       newItem.remove();
-
+       errorElement.style.display = 'block';
 
      });
 
