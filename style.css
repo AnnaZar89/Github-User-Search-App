@@ -16,7 +16,7 @@
     }
 
     main {
-      width: 50%;
+      width: 55%;
 
     }
 
@@ -103,7 +103,7 @@
       flex-direction: column;
       justify-content: space-between;
       width: 100%;
-      padding-right: 10%;
+      padding-right: 7%;
 
     }
 
@@ -122,6 +122,7 @@
     }
 
     .userName {
+      margin-right: 3%;
       font-size: 18px;
       font-weight: 600;
       letter-spacing: 2px;
