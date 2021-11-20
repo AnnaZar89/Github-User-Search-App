@@ -1,7 +1,7 @@
  const url = 'https://api.github.com/user';
  const searchBtn = document.getElementById('searchBtn');
  const picture = document.querySelector('.avatar');
- const userName = document.querySelector('#userName');
+ const userName = document.querySelector('.userName');
  const dateOfRegistration = document.querySelector('#dateOfRegistration');
  const bio = document.querySelector('#bio');
  const repos = document.querySelector('.repos .number');

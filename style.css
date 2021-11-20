@@ -121,7 +121,7 @@
       align-items: center;
     }
 
-    #userName {
+    .userName {
       font-size: 18px;
       font-weight: 600;
       letter-spacing: 2px;
@@ -190,4 +190,105 @@
 
     i {
       transform: translateY(5px)
+    }
+
+    @media (orientation: portrait) {
+      body {
+        font-size: 26px;
+
+      }
+
+      main {
+        width: 70%;
+      }
+
+      .searchBar {
+
+        margin-bottom: 20px;
+
+      }
+
+      .searchBar input {
+        height: 90px;
+        font-size: 26px;
+        padding: 22px 120px 20px 90px;
+
+
+      }
+
+      .fa-search {
+        font-size: 30px;
+        top: 30px;
+        left: 15px;
+      }
+
+      button {
+        top: 20px;
+        right: 25px;
+        width: auto;
+        height: 50px;
+        padding-right: 2%;
+        padding-left: 2%;
+        font-size: 22px;
+      }
+
+      .errorElement {
+        font-size: 26px;
+      }
+
+
+      container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .containerForAvatar {
+        display: flex;
+        justify-content: center;
+        margin-right: 0;
+        margin-top: 2%;
+        margin-bottom: 2%;
+      }
+
+      .avatar {
+        width: 300px;
+        height: 300px;
+      }
+
+      .informations {
+        padding-right: 0;
+
+        align-items: center;
+      }
+
+      .userNameAndDateOfRegistration {
+        flex-direction: column;
+      }
+
+      .userName {
+        font-size: 26px;
+      }
+
+      p {
+        text-align: center;
+      }
+
+      .stats {
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        height: auto;
+        margin-bottom: 8%;
+      }
+
+      .number {
+        display: inline-block;
+        font-size: 26px;
+      }
+
+      .localisationAndTwitter,
+      .blogAndEmail {
+        flex-direction: column;
+        align-items: center;
+      }
     }
